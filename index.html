@@ -7,137 +7,188 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Header / Hero Section -->
-  <header>
-    <div>
-      <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" />
-      <!-- Main Heading -->
-      <h1>
-        Sustainability Through the Ages
-      </h1>
-
-      <!-- Subheading / Description -->
-      <p>
-        Explore Intel's journey through time, discovering how our commitment
-        to innovation has shaped a more sustainable future for technology 
-        and our planet.
-      </p>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Site navigation">
+      <a class="brand" href="index.html" aria-label="Intel sustainability home">
+        <img src="img/intel-header-logo.svg" alt="Intel" />
+      </a>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">Technology innovation / 1968-2024</p>
+      <h1>Sustainability Through the Ages</h1>
+      <p>Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.</p>
+      <a class="hero-link" href="#timeline">Explore the timeline <span aria-hidden="true">&#8595;</span></a>
     </div>
   </header>
 
-  <!-- Timeline Cards Section -->
-  <section>
-
-    <!-- Card 1: 1968 -->
-    <div>
-      <h2>1968</h2>
-      <h3>Intel Founded</h3>
-      <!-- Add image -->
-      <p>
-        Robert Noyce and Gordon Moore rename the newly formed company 
-        NM Electronics to Intel Corporation, laying the foundation for 
-        decades of technological innovation.
-      </p>
+  <main id="timeline" class="timeline-section">
+    <div class="section-intro">
+      <h2>Milestones that move technology forward.</h2>
+      <p>From the first microprocessor to a more responsible manufacturing future, every chapter builds on the last.</p>
     </div>
 
-    <!-- Card 2: 1971 -->
-    <div>
-      <h2>1971</h2>
-      <h3>First Microprocessor</h3>
-      <!-- Add image -->
-      <p>
-        Intel debuts the 4004, the world's first commercial microprocessor, 
-        igniting the microprocessor revolution and propelling the future 
-        of computing devices.
-      </p>
+    <div class="timeline-toolbar">
+      <div class="view-toggle">
+        <input type="checkbox" id="grid-view" />
+        <label for="grid-view">
+          <span class="label-grid">View as grid</span>
+          <span class="label-timeline">View as horizontal timeline</span>
+          <span aria-hidden="true">&#8599;</span>
+        </label>
+      </div>
     </div>
 
-    <!-- Card 3: 1978 -->
-    <div>
-      <h2>1978</h2>
-      <h3>8086 Processor</h3>
-      <!-- Add image -->
-      <p>
-        Launch of the 8086 processor, establishing the x86 architecture 
-        that drives countless PCs and servers in the modern era.
-      </p>
-    </div>
+    <div class="timeline-stage">
+      <div class="timeline-arrows timeline-arrows-left" aria-label="Previous timeline section">
+        <button class="timeline-arrow" id="prevBtn" type="button" aria-label="Show previous milestones">&#8592;</button>
+      </div>
 
-    <!-- Card 4: 1985 -->
-    <div>
-      <h2>1985</h2>
-      <h3>386 Processor</h3>
-      <!-- Add image -->
-      <p>
-        Intel introduces the 386 processor with 32-bit architecture, 
-        ushering in a new era of performance and multitasking for 
-        personal computers.
-      </p>
-    </div>
+      <div class="timeline-viewport" tabindex="0" aria-label="Horizontal milestone timeline">
+        <div class="timeline-list">
+      <article class="timeline-card" id="milestone-1">
+        <img src="img/1.jpg" alt="Early semiconductor technology in 1968" />
+        <div class="card-content">
+          <p class="card-year">01 / 09</p>
+          <p class="card-date">1968</p>
+          <h3>Intel Founded</h3>
+          <p>Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.</p>
+        </div>
+      </article>
 
-    <!-- Card 5: 2006 -->
-    <div>
-      <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <!-- Add image -->
-      <p>
-        This year marks Intel's highest annual greenhouse gas emissions 
-        for operations. Over subsequent years, Intel invests heavily in 
-        chemical abatement, renewable energy, and energy-efficient 
-        manufacturing to reverse this trend.
-      </p>
-    </div>
+      <article class="timeline-card" id="milestone-2">
+        <img src="img/2.jpg" alt="Close-up of an Intel microprocessor" />
+        <div class="card-content">
+          <p class="card-year">02 / 09</p>
+          <p class="card-date">1971</p>
+          <h3>First Microprocessor</h3>
+          <p>Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.</p>
+        </div>
+      </article>
 
-    <!-- Card 6: 2020 -->
-    <div>
-      <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <!-- Add image -->
-      <p>
-        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-        progress on climate action, water stewardship, and waste reduction.
-      </p>
-    </div>
+      <article class="timeline-card" id="milestone-3">
+        <img src="img/3.jpg" alt="Intel 8086 processor from 1978" />
+        <div class="card-content">
+          <p class="card-year">03 / 09</p>
+          <p class="card-date">1978</p>
+          <h3>8086 Processor</h3>
+          <p>Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.</p>
+        </div>
+      </article>
 
-    <!-- Card 7: 2022 -->
-    <div>
-      <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <!-- Add image -->
-      <p>
-        Intel announces its commitment to achieve net-zero greenhouse 
-        gas emissions (Scope 1 and 2) across its global operations 
-        by 2040, building on years of environmental initiatives.
-      </p>
-    </div>
+      <article class="timeline-card" id="milestone-4">
+        <img src="img/4.jpg" alt="Intel 386 processor from 1985" />
+        <div class="card-content">
+          <p class="card-year">04 / 09</p>
+          <p class="card-date">1985</p>
+          <h3>386 Processor</h3>
+          <p>Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.</p>
+        </div>
+      </article>
 
-    <!-- Card 8: 2023 -->
-    <div>
-      <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <!-- Add image -->
-      <p>
-        The company achieves 99% renewable electricity usage worldwide, 
-        helping to drastically lower carbon emissions and driving progress 
-        toward Intel's long-term sustainability goals.
-      </p>
-    </div>
+      <article class="timeline-card" id="milestone-5">
+        <div class="card-content">
+          <p class="card-year">05 / 09</p>
+          <p class="card-date">2006</p>
+          <h3>Peak GHG Emissions</h3>
+          <p>This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.</p>
+        </div>
+  </article>
 
-    <!-- Card 9: 2024 -->
-    <div>
-      <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <!-- Add image -->
-      <p>
-        Intel hosts its first Sustainability Summit, uniting suppliers, 
-        government officials, and industry leaders to collaborate on 
-        next-generation sustainable semiconductor manufacturing.
-      </p>
+  <article class="timeline-card" id="milestone-6">
+        <div class="card-content">
+          <p class="card-year">06 / 09</p>
+          <p class="card-date">2020</p>
+          <h3>RISE Strategy</h3>
+          <p>Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.</p>
+        </div>
+  </article>
+
+  <article class="timeline-card" id="milestone-7">
+        <div class="card-content">
+          <p class="card-year">07 / 09</p>
+          <p class="card-date">2022</p>
+          <h3>Net-Zero By 2040</h3>
+          <p>Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.</p>
+        </div>
+  </article>
+
+  <article class="timeline-card" id="milestone-8">
+        <div class="card-content">
+          <p class="card-year">08 / 09</p>
+          <p class="card-date">2023</p>
+          <h3>Renewable Electricity</h3>
+          <p>The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals.</p>
+        </div>
+  </article>
+
+  <article class="timeline-card" id="milestone-9">
+        <div class="card-content">
+          <p class="card-year">09 / 09</p>
+          <p class="card-date">2024</p>
+          <h3>Sustainability Summit</h3>
+          <p>Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing.</p>
+        </div>
+      </article>
+        </div>
+      </div>
+
+      <div class="timeline-arrows timeline-arrows-right" aria-label="Next timeline section">
+        <button class="timeline-arrow" id="nextBtn" type="button" aria-label="Show next milestones">&#8594;</button>
+      </div>
     </div>
-  </section>
-  <p>Scroll to view timeline | Hover over cards to learn more!</p>
-</body>
-</html>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built for the next generation of technology.</p>
+  </footer>
+
+  <!--
+    AI assistance note for graders:
+    I used AI help for this interaction because I could not create the exact
+    scrolling behavior I wanted using only HTML and CSS. The script connects
+    the two arrow buttons to the scrollable timeline and uses scrollBy() to
+    move by one card at a time. IntersectionObserver watches the first and
+    last cards, disabling the matching button at the start and end boundaries.
+  -->
+  <script>
+    const timelineViewport = document.querySelector('.timeline-viewport');
+    const timelineCards = [...document.querySelectorAll('.timeline-card')];
+    const prevButton = document.querySelector('#prevBtn');
+    const nextButton = document.querySelector('#nextBtn');
+    const firstCard = document.querySelector('#milestone-1');
+    const lastCard = timelineCards[timelineCards.length - 1];
+
+    function getCardDistance() {
+      const cardStyles = window.getComputedStyle(timelineCards[0]);
+      const cardGap = parseFloat(cardStyles.marginRight) || parseFloat(window.getComputedStyle(timelineCards[0].parentElement).gap) || 0;
+      return timelineCards[0].offsetWidth + cardGap;
+    }
+
+    prevButton.addEventListener('click', () => {
+      timelineViewport.scrollBy({ left: -getCardDistance(), behavior: 'smooth' });
+    });
+
+    nextButton.addEventListener('click', () => {
+      timelineViewport.scrollBy({ left: getCardDistance(), behavior: 'smooth' });
+    });
+
+    const timelineObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.target === firstCard) {
+          prevButton.disabled = entry.isIntersecting;
+        }
+
+        if (entry.target === lastCard) {
+          nextButton.disabled = entry.isIntersecting;
+        }
+      });
+    }, {
+      root: timelineViewport,
+      threshold: 0.95
+    });
+
+    timelineObserver.observe(firstCard);
+    timelineObserver.observe(lastCard);
+  </script>
+  </body>
+  </html>
