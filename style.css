@@ -290,11 +290,27 @@ h1 {
   min-height: 24em;
   display: flex;
   flex-direction: column;
+  position: relative;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   background: var(--white);
   box-shadow: var(--shadow);
   transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.timeline-card summary {
+  display: block;
+  height: 100%;
+  list-style: none;
+  cursor: pointer;
+}
+
+.timeline-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.card-close {
+  display: none;
 }
 
 /* Ensures the final card snaps to the right edge so the last 3 fit flush */
@@ -344,9 +360,30 @@ h1 {
 }
 
 .card-content p:last-child {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  padding: var(--timeline-padding);
   margin: 0;
-  color: var(--muted);
-  font-size: 0.95em;
+  color: var(--white);
+  background: rgba(0, 45, 88, 0.92);
+  font-size: clamp(0.95em, 1.2vw, 1.08em);
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  opacity: 0;
+  transition: opacity 180ms ease;
+  pointer-events: none;
+}
+
+.timeline-card:hover .card-content p:last-child,
+.timeline-card:focus-within .card-content p:last-child,
+.timeline-card[open] .card-content p:last-child {
+  opacity: 1;
 }
 
 /* The checkbox changes the same cards into the full milestone grid. */
@@ -406,6 +443,26 @@ h1 {
 
   .timeline-card {
     flex: 0 0 100%;
+  }
+
+  .timeline-card .card-content p:last-child {
+    position: static;
+    min-height: 0;
+    display: block;
+    padding: 0;
+    color: var(--muted);
+    background: transparent;
+    opacity: 1;
+  }
+
+  .timeline-card:hover,
+  .timeline-card:focus-within {
+    transform: none;
+    box-shadow: var(--shadow);
+  }
+
+  .timeline-card .card-close {
+    display: none;
   }
 
   .timeline-section:has(#grid-view:checked) .timeline-card {
